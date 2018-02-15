@@ -23,11 +23,17 @@ define('DBNAME', 'cr10_armstorfer_angela_biglibrary');
  
 $conn = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
 
+mysqli_set_charset($conn, "utf8");
+
 if ( !$conn ) {
 
   die("Connection failed : " . mysqli_error());
 
  }
+
+header("Content-Type: text/html;charset=utf-8");
+
+ //echo "verbunden";
 
 ?>
 
